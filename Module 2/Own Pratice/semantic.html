@@ -1,69 +1,76 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>semantics</title>
     <style>
-        body{
-            background:linear-gradient(45deg, rgb(222, 133, 133), rgb(225, 121, 210));
-            font-weight: bolder;
-            
-        }
+      body {
+        background: linear-gradient(
+          120deg,
+          rgb(222, 133, 133),
+          rgb(225, 121, 210)
+        );
+        font-weight: bolder;
+      }
 
-        kbd{
-            border: 1px solid black;
-            padding: 1px 3px;
-            border-radius: 3px;
-            box-shadow: 3px 2px 1px;
-        }
+      kbd {
+        border: 1px solid black;
+        padding: 1px 3px;
+        border-radius: 3px;
+        box-shadow: 3px 2px 1px;
+      }
 
-        aside{
-            align-items: center;
-        }
+      aside {
+        align-items: center;
+      }
 
-        ul{
-            display: flex;
-            gap: 10px;
-            list-style: none;
-            cursor: pointer;
-            
+      ul {
+        display: flex;
+        gap: 10px;
+        list-style: none;
+        cursor: pointer;
+      }
 
-        }
-
-        
+      footer {
+        margin-top: 50px;
+      }
+      abbr{
+        color: aqua;
+      }
     </style>
-</head>
-<body>
-    <header>
-        This is the pratice of the semantic learnt
-    </header>
+  </head>
+  <body>
+    <header>This is the pratice of the semantic learnt</header>
     <nav>
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-            <li>Feedback</li>
-        </ul>
+      <ul>
+        <li><a href="#nav-click">Home</a></li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Feedback</li>
+      </ul>
     </nav>
+    <section>
+        <abbr title="Web Accessibility Initiative- Accessibility Rich Internet Application">WAI-ARIA</abbr>
+    </section>
     <details>
-        <summary>Show learnings</summary>
-        In this module I learnt about how to give meaning full name to the html tags
-        <article>
-            There is alot of tags that are used for the semantics.
-        </article>
+      <summary>Show learnings</summary>
+      In this module I learnt about how to give meaning full name to the html
+      tags
+      <article>There is alot of tags that are used for the semantics.</article>
     </details>
 
     <figure>
-        <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1630795051989/ljYyrmHUE.jpeg?auto=compress,format&format=webp"
+      <img
+        src="https://cdn.hashnode.com/res/hashnode/image/upload/v1630795051989/ljYyrmHUE.jpeg?auto=compress,format&format=webp"
         alt="Semantics pic"
-            width="500"
-        >
-        <figcaption>This is the semantic tags</figcaption>
-    
+        width="500"
+      />
+      <figcaption>This is the semantic tags</figcaption>
     </figure>
 
     <section>
-        <pre>
+        <!-- pre for output same as the editor  -->
+      <pre>
             This <kbd>pre</kbd> tag is used to show the text in the exact form as it is in the editor.
             Also code can be shown. 
             <code>
@@ -74,16 +81,51 @@
         </pre>
     </section>
 
-    <aside>
-        This is aside tag
-    </aside>
+    <aside>This is aside tag</aside>
 
+    <!-- Just dummy area for the nav click -->
+    <article id="nav-click">
+      This is just to redirect the nav click to here.
+      <!-- Testing some citation here  -->
+      <strong> Testing some citation here</strong>
+      <blockquote>
+        <p></p>
+      </blockquote>
+    </article>
 
     <footer>
-        &copy; Rahul Yadav
-        This much for the footer
-    </footer>
+      &copy; Rahul Yadav
+      <address>
+        VVN PG for MEN <br />
+        Opposite of Durgam Cheruvu<br />
+        Hyderabad
+      </address>
+      <a href="mailto:rahulblockchain123@gmail.com">Email</a><br />
+      <a href="tel:+918869938463">8869938463</a>
+      <p>
+        The creation date of this webpage is
+        <time datetime="2025-01-19"> January 19, 2025</time> at
+        <time datetime="12:02"> 12:02</time>
+      </p>
 
-    
-</body>
+      <section>
+        Some words from the creator of this page
+
+        <p>
+          <q>I am creating this page inorder to learn <kbd>Semantic.</kbd> </q>
+          Rahul Yadav
+        </p>
+
+        <blockquote cite="https://kfoundation.org/quotes/?gad_source=1&gclid=Cj0KCQiAv628BhC2ARIsAIJIiK_FGtOIiFEVLA-aoeFJvYmuZjv28zOrfhbQCify7csnO1jNRshtAJUaArpwEALw_wcB">
+          <p>
+            You must understand the whole of life, not just one part of it. That
+            is why you must read, that is why you must look at the skies, why
+            you must sing, dance and write poems, and suffer, and understand,
+            for all that is life.
+          </p>
+          <cite>Krishnamurti, Think on These Things</cite>
+        </blockquote>
+      </section>
+    </footer>
+  </body>
 </html>
