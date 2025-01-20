@@ -1,0 +1,154 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <style>
+    
+
+    main {
+      height: 100%;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+      margin: 10px;
+    }
+    input {
+      /* box-shadow: 1px 1px 2px rgb(8, 8, 8); */
+      margin: 2px;
+    }
+    #reset:hover {
+      background-color: rgba(220, 10, 10, 0.5);
+      cursor: pointer;
+      transform: scale(1.1);
+      font-weight: bold;
+    }
+
+    #submit:hover {
+      background-color: rgba(10, 220, 20, 0.8);
+      cursor: pointer;
+      transform: scale(1.1);
+      font-weight: bold;
+    }
+
+    #submit:active {
+      background-color: orange;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      background-color: rgba(143, 237, 147, 0.8);
+    }
+    legend {
+      color: rgb(7, 230, 41);
+      font-size: large;
+      font-weight: 800;
+    }
+    label { 
+      color: rgb(103, 16, 202);
+      font-weight: 500;
+      /* Very very important property */
+      width: 8em;
+      display: inline-block;
+    }
+  </style>
+  <body>
+    <main>
+      <h2>Praticing Forms</h2>
+      <form action="" method="get" id="personal questions">
+        <fieldset>
+          <legend>Personal Info</legend>
+
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required /><br />
+
+          <p>Gender:</p>
+          <input type="radio" id="male" name="gender" value="Male" />
+          <label for="male">Male</label>
+
+          <input type="radio" id="female" name="gender" value="Female" />
+          <label for="female">Female</label><br />
+
+          <label for="hbd"><abbr title="Date of Birth">DOB:</abbr> </label>
+          <input type="date" id="hbd" name="hbd" min="2000-01-01" /><br />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" /><br />
+
+          <label for="website">Website:</label>
+          <input type="url" id="website" name="website" /><br />
+
+          <label for="favnum">Favourite Number: </label>
+          <input
+            type="number"
+            id="favnum"
+            name="favnum"
+            step="any"
+            max="10000"
+            min="-90"
+          /><br />
+        </fieldset>
+
+        <label for="time">Meeting Time:</label>
+        <input type="time" id="time" name="time" /><br />
+
+        <fieldset>
+          <legend>Coding language</legend>
+
+          <input
+            type="checkbox"
+            id="java"
+            name="language"
+            value="Java"
+            checked
+          />
+          <label for="java">Java</label><br />
+          <input type="checkbox" id="python" name="language" value="Python" />
+          <label for="python">Python</label><br />
+          <input type="checkbox" id="csharp" name="language" value="C#" />
+          <label for="csharp">C#</label><br />
+        </fieldset>
+        <br />
+
+        <fieldset>
+          <legend>Choose Your favfood</legend>
+
+          <select id="favfood" name="favfood">
+            <optgroup label="Non Veg">
+              <option value="Biryani">Biryani</option>
+              <option value="Chicken 65">Chicken 65</option>
+              <option value="Chicken Fried Rice">Chicken Fried Rice</option>
+            </optgroup>
+
+            <optgroup label="Veg ">
+              <option value="Rooti">Rooti</option>
+              <option value="Pulau">Pulau</option>
+            </optgroup></select
+          ><br />
+
+          <label for="color">Fav Color</label>
+          <input type="color" id="color" name="color" />
+        </fieldset>
+        <br />
+
+        <fieldset>
+          <legend>Some More Info</legend>
+          <label for="resume">Upload Your Resume</label>
+          <input type="file" id="resume" name="resume" accept="image/*" /><br />
+
+          <label for="comment">Feedback</label>
+          <textarea id="comment" name="comment" placeholder="Feedback">
+          </textarea>
+        </fieldset>
+
+        <input type="reset" id="reset" />
+        <!-- <input type="submit" id="submit" /> -->
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
