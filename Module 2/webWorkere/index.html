@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Web Worker Example</title>
+</head>
+<body>
+    <h1>Web Worker Factorial Example</h1>
+    <p id="result">Calculating...</p>
+    <script>
+        if (window.Worker) {
+            const worker = new Worker('factorialWorker.js');
+            worker.postMessage(100);
+            worker.onmessage = function(e) {
+                document.getElementById('result').textContent = `Factorial of 10 is: ${e.data}`;
+            };
+        } else {
+            document.getElementById('result').textContent = 'Your browser does not support Web Workers.';
+        }
+    </script>
+</body>
+</html>
